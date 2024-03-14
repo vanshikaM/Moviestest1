@@ -49,6 +49,7 @@ test('Add Movie without date',async ({page})=>{
 })
 
 test('Add Review with some fields',async ({page})=>{
+    
     await page.goto('https://movie-reviews-psi.vercel.app/');
     await page.getByRole('button', { name: 'Add new review' }).click();
     await page.locator('#movie').selectOption('cltpz376m0001l121kh0al0wr');
@@ -56,6 +57,7 @@ test('Add Review with some fields',async ({page})=>{
     await page.getByPlaceholder('Review comments').click();
     await page.getByPlaceholder('Review comments').fill('nice');
     await page.getByRole('button', { name: 'Create Review' }).click();
+    
 })
 test('Delete Review',async ({page})=>{
     await page.goto('https://movie-reviews-psi.vercel.app/');
